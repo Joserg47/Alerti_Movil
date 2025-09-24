@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores base del tema -->
+    <color name="primary">#BFC3AE</color>
+    <color name="on_primary">#E1F9EE</color>
+    <color name="primary_container">#527D96</color>
+    <color name="on_primary_container">#E0ECF6</color>
+
+    <color name="secondary">#60AD98</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#BDD3E8</color>
+    <color name="on_secondary_container">#1A2C36</color>
+
+    <color name="tertiary">#E1F9EE</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="tertiary_container">#E0ECF6</color>
+    <color name="on_tertiary_container">#2C4756</color>
+
+    <!-- Colores adicionales útiles -->
+    <color name="background">#E0ECF6</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#B00020</color>
+
+    <!-- Colores de texto -->
+    <color name="text_primary">#1A2C36</color>
+    <color name="text_secondary">#2C4756</color>
+    <color name="text_hint">#527D96</color>
+</resources>

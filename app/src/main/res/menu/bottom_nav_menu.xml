@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_inicio"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/navigation_perfil"
+        android:icon="@drawable/ic_person"
+        android:title="Mi Perfil" />
+
+    <item
+        android:id="@+id/navigation_calendario"
+        android:icon="@drawable/ic_calendar"
+        android:title="Calendario" />
+
+    <item
+        android:id="@+id/navigation_anadir"
+        android:icon="@drawable/ic_add"
+        android:title="Añadir" />
+</menu>

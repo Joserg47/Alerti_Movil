@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tus recordatorios"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Recordatorio 1 - Acetaminofen -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRecordatorio1"
+                android:layout_width="364dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/primary_container"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/header1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Acetaminofen"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/on_primary_container" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500mg"
+                                android:textSize="16sp"
+                                android:textColor="@color/on_primary_container"
+                                android:layout_marginStart="8dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pastilla"
+                            android:textSize="14sp"
+                            android:background="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditar1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_edit"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBorrar1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_delete"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/header1"
+                        android:layout_above="@+id/progressContainer1"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Próxima: 8:00 AM"
+                            android:textSize="14sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21 Sep 2025"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cada 12h • 7 días"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@id/progressContainer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentBottom="true">
+
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:progress="25"
+                            android:progressTint="@color/on_primary_container" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7/28 Dosis"
+                            android:textSize="12sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recordatorio 2 - Ibuprofeno -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRecordatorio2"
+                android:layout_width="364dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/primary_container"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/header2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ibuprofeno"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/on_primary_container" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="400mg"
+                                android:textSize="16sp"
+                                android:textColor="@color/on_primary_container"
+                                android:layout_marginStart="8dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tableta"
+                            android:textSize="14sp"
+                            android:background="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditar2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_edit"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBorrar2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_delete"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/header2"
+                        android:layout_above="@+id/progressContainer2"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Próxima: 2:00 PM"
+                            android:textSize="14sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="22 Sep 2025"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cada 8h • 5 días"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@id/progressContainer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentBottom="true">
+
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:progress="60"
+                            android:progressTint="@color/on_primary_container" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9/15 Dosis"
+                            android:textSize="12sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recordatorio 3 - Omeprazol -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRecordatorio3"
+                android:layout_width="364dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/primary_container"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/header3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Omeprazol"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/on_primary_container" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20mg"
+                                android:textSize="16sp"
+                                android:textColor="@color/on_primary_container"
+                                android:layout_marginStart="8dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cápsula"
+                            android:textSize="14sp"
+                            android:background="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditar3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_edit"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBorrar3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_delete"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/header3"
+                        android:layout_above="@+id/progressContainer3"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Próxima: 7:00 AM"
+                            android:textSize="14sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23 Sep 2025"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cada 24h • 30 días"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@id/progressContainer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentBottom="true">
+
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:progress="40"
+                            android:progressTint="@color/on_primary_container" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12/30 Dosis"
+                            android:textSize="12sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recordatorio 4 - Loratadina -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRecordatorio4"
+                android:layout_width="364dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/primary_container"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/header4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Loratadina"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/on_primary_container" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10mg"
+                                android:textSize="16sp"
+                                android:textColor="@color/on_primary_container"
+                                android:layout_marginStart="8dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tableta"
+                            android:textSize="14sp"
+                            android:background="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditar4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_edit"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBorrar4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_delete"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/header4"
+                        android:layout_above="@+id/progressContainer4"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Próxima: 8:00 PM"
+                            android:textSize="14sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="24 Sep 2025"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cada 24h • 10 días"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@id/progressContainer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentBottom="true">
+
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:progress="70"
+                            android:progressTint="@color/on_primary_container" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7/10 Dosis"
+                            android:textSize="12sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recordatorio 5 - Amoxicilina -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRecordatorio5"
+                android:layout_width="364dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/primary_container"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/header5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Amoxicilina"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/on_primary_container" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500mg"
+                                android:textSize="16sp"
+                                android:textColor="@color/on_primary_container"
+                                android:layout_marginStart="8dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cápsula"
+                            android:textSize="14sp"
+                            android:background="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditar5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_edit"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBorrar5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/secondary_container"
+                            android:textColor="@color/on_secondary_container"
+                            android:padding="0dp"
+                            app:icon="@drawable/ic_delete"
+                            app:iconTint="@color/on_secondary_container"
+                            app:iconSize="20dp"
+                            app:cornerRadius="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/header5"
+                        android:layout_above="@+id/progressContainer5"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Próxima: 9:00 AM"
+                            android:textSize="14sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="25 Sep 2025"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cada 12h • 14 días"
+                            android:textSize="13sp"
+                            android:textColor="@color/on_primary_container" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@id/progressContainer5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentBottom="true">
+
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:progress="35"
+                            android:progressTint="@color/on_primary_container" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5/14 Dosis"
+                            android:textSize="12sp"
+                            android:textColor="@color/on_primary_container"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
