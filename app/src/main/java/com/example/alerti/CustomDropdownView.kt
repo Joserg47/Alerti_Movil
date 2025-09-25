@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.FrameLayout
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatAutoCompleteTextView
+import com.google.android.material.textfield.MaterialAutoCompleteTextView
 
 class CustomDropdownView @JvmOverloads constructor(
     context: Context,
@@ -16,7 +16,7 @@ class CustomDropdownView @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     private val labelTextView: TextView
-    private val autoCompleteTextView: AppCompatAutoCompleteTextView
+    private val autoCompleteTextView: MaterialAutoCompleteTextView
     
     private var options: List<String> = emptyList()
     private var onSelectionChangedListener: ((String?) -> Unit)? = null

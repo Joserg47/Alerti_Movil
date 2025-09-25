@@ -6,7 +6,6 @@
     android:layout_margin="8dp"
     android:orientation="vertical">
 
-    <!-- Label -->
     <TextView
         android:id="@+id/labelTextView"
         style="@style/DropdownLabelStyle"
@@ -15,14 +14,12 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
-    <!-- Dropdown Container -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/dropdown_background">
 
-        <!-- AutoCompleteTextView for dropdown functionality -->
-        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
             style="@style/DropdownTextStyle"
             android:layout_width="match_parent"
@@ -39,7 +36,6 @@
             android:inputType="none"
             android:completionThreshold="0" />
 
-        <!-- Dropdown Arrow Icon -->
         <ImageView
             android:id="@+id/dropdownArrow"
             android:layout_width="wrap_content"
