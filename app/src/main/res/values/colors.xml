@@ -12,6 +12,9 @@
 
     <color name="tertiary">#E1F9EE</color>
     <color name="on_tertiary">#FFFFFF</color>
+    
+    <color name="header_background">#E1F9EE</color>
+    <color name="header_text">#1D1B20</color>
     <color name="tertiary_container">#E0ECF6</color>
     <color name="on_tertiary_container">#2C4756</color>
 

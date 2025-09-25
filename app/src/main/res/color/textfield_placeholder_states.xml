@@ -3,3 +3,4 @@
     <!-- Estado normal del placeholder -->
     <item android:color="@color/textfield_placeholder" />
 </selector>
+
