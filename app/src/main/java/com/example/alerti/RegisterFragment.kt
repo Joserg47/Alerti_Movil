@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class RegisterFragment : Fragment() {
 
@@ -20,7 +19,7 @@ class RegisterFragment : Fragment() {
     private lateinit var phoneField: CustomTextFieldView
     private lateinit var usernameField: CustomTextFieldView
     private lateinit var passwordField: CustomTextFieldView
-    private lateinit var registerButton: ExtendedFloatingActionButton
+    private lateinit var registerButton: CustomButtonView
     private lateinit var loginLink: TextView
 
     override fun onCreateView(
@@ -61,7 +60,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun setupListeners() {
-        registerButton.setOnClickListener {
+        registerButton.onClickListener = {
             findNavController().navigate(R.id.action_register_to_login)
         }
 

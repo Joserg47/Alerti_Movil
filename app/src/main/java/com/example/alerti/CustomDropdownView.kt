@@ -3,11 +3,10 @@ package com.example.alerti
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.FrameLayout
-import android.widget.TextView
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
+import com.google.android.material.textfield.TextInputLayout
 
 class CustomDropdownView @JvmOverloads constructor(
     context: Context,
@@ -15,7 +14,7 @@ class CustomDropdownView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
-    private val labelTextView: TextView
+    private val textInputLayout: TextInputLayout
     private val autoCompleteTextView: MaterialAutoCompleteTextView
     
     private var options: List<String> = emptyList()
@@ -27,18 +26,18 @@ class CustomDropdownView @JvmOverloads constructor(
     var label: String? = null
         set(value) {
             field = value
-            updateLabel()
+            textInputLayout.hint = value
         }
 
     var placeholder: String? = null
         set(value) {
             field = value
-            autoCompleteTextView.hint = value
+            textInputLayout.placeholderText = value
         }
 
     init {
         val view = LayoutInflater.from(context).inflate(R.layout.custom_dropdown, this, true)
-        labelTextView = view.findViewById(R.id.labelTextView)
+        textInputLayout = view.findViewById(R.id.textInputLayout)
         autoCompleteTextView = view.findViewById(R.id.autoCompleteTextView)
         
         setupDropdown()
@@ -46,31 +45,13 @@ class CustomDropdownView @JvmOverloads constructor(
     }
 
     private fun setupDropdown() {
-        // Hacer que el AutoCompleteTextView funcione como dropdown
-        autoCompleteTextView.setOnClickListener {
-            autoCompleteTextView.showDropDown()
-        }
-
-        autoCompleteTextView.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) {
-                autoCompleteTextView.showDropDown()
-            }
-        }
 
         autoCompleteTextView.setOnItemClickListener { _, _, position, _ ->
             if (position < options.size) {
-                val selectedOption = options[position]
-                this.selectedOption = selectedOption
-                autoCompleteTextView.setText(selectedOption, false)
-                autoCompleteTextView.dismissDropDown()
-                autoCompleteTextView.clearFocus()
+                selectedOption = options[position]
                 onSelectionChangedListener?.invoke(selectedOption)
             }
         }
-
-        // Prevenir que se pueda escribir en el campo
-        autoCompleteTextView.keyListener = null
-        autoCompleteTextView.threshold = 0
     }
 
     private fun loadAttributesFromXml(attrs: AttributeSet) {
@@ -90,14 +71,6 @@ class CustomDropdownView @JvmOverloads constructor(
         }
     }
 
-    private fun updateLabel() {
-        if (label.isNullOrEmpty()) {
-            labelTextView.visibility = View.GONE
-        } else {
-            labelTextView.text = label
-            labelTextView.visibility = View.VISIBLE
-        }
-    }
 
     fun setOptions(options: List<String>) {
         this.options = options

@@ -172,18 +172,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Extended FAB Button -->
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.example.alerti.CustomButtonView
             android:id="@+id/registerButton"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:text="@string/crear_cuenta_button"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/on_primary_container"
-            app:backgroundTint="@color/primary_container"
-            app:elevation="4dp"
+            app:buttonText="@string/crear_cuenta_button"
+            app:buttonVariant="primary"
+            app:buttonSize="small"
             app:layout_constraintTop_toBottomOf="@id/passwordField"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
