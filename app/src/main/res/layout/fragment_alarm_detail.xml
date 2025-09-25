@@ -8,6 +8,7 @@
     android:paddingTop="24dp"
     android:gravity="center">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +26,7 @@
                 android:text="8:00 AM"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                android:textColor="@color/primary"
+                android:textColor="@color/on_tertiary_container"
                 android:layout_marginBottom="24dp" />
 
             <com.google.android.material.card.MaterialCardView
@@ -35,61 +36,58 @@
                 app:cardCornerRadius="28dp"
                 app:strokeColor="@color/primary_container"
                 app:strokeWidth="2dp"
-                app:cardBackgroundColor="@color/tertiary_container">
+                app:cardBackgroundColor="@color/on_primary_container">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="20dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <TextView
                         android:id="@+id/textMedicamento"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ACETAMINOFEN 500mg"
-                        android:textSize="24dp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
                         android:textColor="@color/on_tertiary_container"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="16dp" />
+                        android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:id="@+id/textTipo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pastilla"
-                        android:textSize="24dp"
+                        android:textSize="24sp"
                         android:textColor="@color/on_tertiary_container"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@id/textMedicamento"
-                        android:layout_marginTop="8dp" />
+                        android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:id="@+id/textDosis"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/textTipo"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="1dp"
                         android:text="7/14 Dosis"
                         android:textColor="@color/on_tertiary_container"
-                        android:textSize="24dp" />
+                        android:textSize="24sp" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnConfirmar"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="129dp"
+                android:layout_height="129dp"
+                android:layout_marginBottom="24dp"
                 android:text="CONFIRMAR"
-                android:textSize="16sp"
-                app:cornerRadius="120dp"
-                app:backgroundTint="@color/primary"
                 android:textColor="@color/on_primary"
-                android:layout_marginBottom="24dp" />
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:letterSpacing="0.1"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="120dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnPosponer"
