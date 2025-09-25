@@ -1,4 +1,33 @@
 <resources>
 <string name="app_name">Alerti</string>
     <string name="bienvenido_a_alerti">Bienvenido a Alerti</string>
+
+    <!-- Dropdown options -->
+    <string-array name="gender_options">
+        <item>Femenino</item>
+        <item>Masculino</item>
+        <item>Prefiero no decirlo</item>
+        <item>Otro</item>
+    </string-array>
+
+    <!-- Dropdown labels and placeholders -->
+    <string name="dropdown_gender_label">Género</string>
+    <string name="dropdown_gender_placeholder">Selecciona tu género</string>
+
+    <!-- Register form labels and placeholders -->
+    <string name="datos_personales">Datos personales</string>
+    <string name="datos_cuenta">Datos de cuenta</string>
+    <string name="nombre_completo_label">Nombre completo</string>
+    <string name="nombre_completo_placeholder">Ingrese su nombre</string>
+    <string name="fecha_nacimiento_label">Fecha de nacimiento</string>
+    <string name="fecha_nacimiento_placeholder">MM/DD/AAAA</string>
+    <string name="numero_celular_label">Número de celular</string>
+    <string name="numero_celular_placeholder">Ingrese su número</string>
+    <string name="usuario_label">Usuario</string>
+    <string name="usuario_placeholder">Ingrese su usuario</string>
+    <string name="contrasena_label">Contraseña</string>
+    <string name="contrasena_placeholder">Ingrese su contraseña</string>
+    <string name="crear_cuenta_button">Crear</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes una cuenta?</string>
+    <string name="inicia_sesion">Inicia sesión</string>
 </resources>

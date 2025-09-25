@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Dropdown Styles -->
+    <style name="CustomDropdownStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Dropdown Label Style -->
+    <style name="DropdownLabelStyle">
+        <item name="android:textColor">@color/dropdown_label</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Dropdown Text Style -->
+    <style name="DropdownTextStyle">
+        <item name="android:textColor">@color/dropdown_text_states</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColorHint">@color/dropdown_placeholder</item>
+    </style>
+
+</resources>

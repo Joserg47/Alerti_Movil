@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado enfocado -->
+    <item android:state_focused="true" android:color="@color/dropdown_outline_focus" />
+    <!-- Estado hover -->
+    <item android:state_hovered="true" android:color="@color/dropdown_outline_hover" />
+    <!-- Estado normal -->
+    <item android:color="@color/dropdown_outline" />
+</selector>

@@ -36,4 +36,17 @@
     <color name="textfield_label_focus">#2E5B75</color>
     <color name="textfield_text_disabled">#1D1B20</color>
     <color name="textfield_background">#FEF7FF</color>
+
+    <!-- Dropdown colors -->
+    <color name="dropdown_background">#FEF7FF</color>
+    <color name="dropdown_outline">#527D96</color>
+    <color name="dropdown_outline_focus">#2E5B75</color>
+    <color name="dropdown_outline_hover">#2E5B75</color>
+    <color name="dropdown_text">#527D96</color>
+    <color name="dropdown_label">#527D96</color>
+    <color name="dropdown_placeholder">#527D96</color>
+    <color name="dropdown_arrow">#527D96</color>
+    <color name="dropdown_option_text">#333333</color>
+    <color name="dropdown_option_hover">#F5F5F5</color>
+    <color name="dropdown_shadow">#1A000000</color>
 </resources>

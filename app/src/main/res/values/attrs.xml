@@ -11,4 +11,10 @@
         <attr name="buttonVariant" format="string" />
         <attr name="buttonSize" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="CustomDropdownView">
+        <attr name="dropdownLabel" format="string" />
+        <attr name="dropdownPlaceholder" format="string" />
+        <attr name="dropdownOptions" format="reference" />
+    </declare-styleable>
 </resources>
