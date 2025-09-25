@@ -64,4 +64,10 @@
         android:label="Ajustes Alarma"
         tools:layout="@layout/fragment_alarm_settings" />
 
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="com.example.alerti.ChangePasswordFragment"
+        android:label="Cambiar contraseña"
+        tools:layout="@layout/fragment_change_password" />
+
 </navigation>

@@ -13,17 +13,23 @@ class SuccessDialogFragment : DialogFragment() {
         private const val ARG_TITLE = "title"
         private const val ARG_BUTTON_TEXT = "button_text"
         private const val ARG_SHOW_BUTTON = "show_button"
+        private const val ARG_ACTION_TYPE = "action_type"
+
+        const val ACTION_TYPE_REGISTER = "register"
+        const val ACTION_TYPE_PASSWORD_CHANGED = "password_changed"
 
         fun newInstance(
             title: String = "Tu cuenta ha sido creada exitosamente",
             buttonText: String = "Entrar",
-            showButton: Boolean = true
+            showButton: Boolean = true,
+            actionType: String = ACTION_TYPE_REGISTER
         ): SuccessDialogFragment {
             val fragment = SuccessDialogFragment()
             val args = Bundle()
             args.putString(ARG_TITLE, title)
             args.putString(ARG_BUTTON_TEXT, buttonText)
             args.putBoolean(ARG_SHOW_BUTTON, showButton)
+            args.putString(ARG_ACTION_TYPE, actionType)
             fragment.arguments = args
             return fragment
         }
@@ -53,7 +59,15 @@ class SuccessDialogFragment : DialogFragment() {
     }
 
     private fun onAction() {
-        findNavController().navigate(R.id.action_register_to_alarm_list)
+        val actionType = arguments?.getString(ARG_ACTION_TYPE) ?: ACTION_TYPE_REGISTER
+        
+        when (actionType) {
+            ACTION_TYPE_REGISTER -> {
+                findNavController().navigate(R.id.action_register_to_alarm_list)
+            }
+            ACTION_TYPE_PASSWORD_CHANGED -> {
+            }
+        }
         dismiss()
     }
 }

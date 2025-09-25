@@ -13,7 +13,8 @@
     app:boxCornerRadiusBottomStart="4dp"
     app:boxCornerRadiusBottomEnd="4dp"
     app:hintTextColor="@color/textfield_hint_states"
-    app:placeholderTextColor="@color/textfield_placeholder_states">
+    app:placeholderTextColor="@color/textfield_placeholder_states"
+    app:expandedHintEnabled="false">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"

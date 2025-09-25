@@ -33,4 +33,16 @@
 
     <string name="dialog_account_created_title">Tu cuenta ha sido creada exitosamente</string>
     <string name="dialog_enter_button">Entrar</string>
+    
+    <string name="cambiar_contrasena_title">Cambiar contraseña</string>
+    <string name="contrasena_actual_label">Contraseña actual</string>
+    <string name="contrasena_actual_placeholder">Ingrese su contraseña actual</string>
+    <string name="nueva_contrasena_label">Nueva contraseña</string>
+    <string name="nueva_contrasena_placeholder">Ingrese su nueva contraseña</string>
+    <string name="confirmar_contrasena_label">Confirmar contraseña</string>
+    <string name="confirmar_contrasena_placeholder">Confirme su nueva contraseña</string>
+    <string name="cambiar_contrasena_button">Guardar</string>
+    <string name="cancelar_button">Cancelar</string>
+    <string name="dialog_password_changed_title">Tu contraseña ha sido cambiada exitosamente</string>
+    <string name="dialog_ok_button">Entrar</string>
 </resources>

@@ -32,7 +32,13 @@ class CustomTextFieldView @JvmOverloads constructor(
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomTextFieldView)
         try {
             textInputLayout.hint = typedArray.getString(R.styleable.CustomTextFieldView_label)
-            textInputLayout.placeholderText = typedArray.getString(R.styleable.CustomTextFieldView_placeholder)
+            
+            val placeholder = typedArray.getString(R.styleable.CustomTextFieldView_placeholder)
+            textInputLayout.placeholderText = if (placeholder != null && placeholder.length > 25) {
+                "${placeholder.take(22)}..."
+            } else {
+                placeholder
+            }
             
             val inputType = typedArray.getString(R.styleable.CustomTextFieldView_inputType)
             textInputEditText.inputType = when (inputType?.lowercase()) {
