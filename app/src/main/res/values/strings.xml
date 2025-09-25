@@ -30,4 +30,7 @@
     <string name="crear_cuenta_button">Crear</string>
     <string name="ya_tienes_cuenta">¿Ya tienes una cuenta?</string>
     <string name="inicia_sesion">Inicia sesión</string>
+
+    <string name="dialog_account_created_title">Tu cuenta ha sido creada exitosamente</string>
+    <string name="dialog_enter_button">Entrar</string>
 </resources>

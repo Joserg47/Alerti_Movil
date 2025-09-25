@@ -61,7 +61,7 @@ class RegisterFragment : Fragment() {
 
     private fun setupListeners() {
         registerButton.onClickListener = {
-            findNavController().navigate(R.id.action_register_to_login)
+            showSuccessDialog()
         }
 
         loginLink.setOnClickListener {
@@ -95,6 +95,15 @@ class RegisterFragment : Fragment() {
         scrollView.post {
             scrollView.smoothScrollTo(0, location[1] - 200) // 200px de padding superior
         }
+    }
+    
+    private fun showSuccessDialog() {
+        val dialog = SuccessDialogFragment.newInstance(
+            title = getString(R.string.dialog_account_created_title),
+            buttonText = getString(R.string.dialog_enter_button),
+            showButton = true
+        )
+        dialog.show(parentFragmentManager, "SuccessDialog")
     }
 }
 

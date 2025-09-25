@@ -37,6 +37,18 @@
     <color name="textfield_text_disabled">#1D1B20</color>
     <color name="textfield_background">#FEF7FF</color>
 
+    <color name="m3_sys_light_on_surface">#1D1B20</color>
+    <color name="m3_sys_light_on_surface_variant">#49454F</color>
+    <color name="m3_sys_light_primary_container">#527D96</color>
+    <color name="m3_sys_light_on_primary_container">#E0ECF6</color>
+    <color name="m3_sys_light_primary">#2E5B75</color>
+    <color name="m3_sys_light_on_secondary_container">#1A2C36</color>
+    
+    <color name="card_background">#E1F9EE</color>
+    <color name="schemes_secondary_container">#BDD3E8</color>
+    <color name="dialog_background">@color/card_background</color>
+    <color name="dialog_stroke">#373737</color>
+
     <!-- Dropdown colors -->
     <color name="dropdown_background">#FEF7FF</color>
     <color name="dropdown_outline">#527D96</color>

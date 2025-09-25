@@ -31,6 +31,10 @@
         <action
             android:id="@+id/action_register_to_login"
             app:destination="@id/loginFragment" />
+            
+        <action
+            android:id="@+id/action_register_to_alarm_list"
+            app:destination="@id/alarmListFragment" />
     </fragment>
 
     <fragment
