@@ -22,4 +22,15 @@
     <color name="text_primary">#1A2C36</color>
     <color name="text_secondary">#2C4756</color>
     <color name="text_hint">#527D96</color>
+
+    <color name="textfield_outline">#527D96</color>
+    <color name="textfield_outline_focus">#2E5B75</color>
+    <color name="textfield_outline_hover">#2E5B75</color>
+    <color name="textfield_outline_disabled">#1D1B20</color>
+    <color name="textfield_text">#527D96</color>
+    <color name="textfield_placeholder">#527D96</color>
+    <color name="textfield_label">#527D96</color>
+    <color name="textfield_label_focus">#2E5B75</color>
+    <color name="textfield_text_disabled">#1D1B20</color>
+    <color name="textfield_background">#FEF7FF</color>
 </resources>
