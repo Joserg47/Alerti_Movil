@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.button.MaterialButton
 
 class AlarmListFragment : Fragment() {
 
@@ -35,13 +35,13 @@ class AlarmListFragment : Fragment() {
             findNavController().navigate(R.id.action_to_alarm_detail)
         }
 
-        view.findViewById<MaterialButton>(editButtonId)?.setOnClickListener {
+        view.findViewById<ImageButton>(editButtonId)?.setOnClickListener {
             it?.isClickable = true
             it?.isFocusable = true
             findNavController().navigate(R.id.action_to_alarm_settings)
         }
 
-        view.findViewById<MaterialButton>(deleteButtonId)?.setOnClickListener {
+        view.findViewById<ImageButton>(deleteButtonId)?.setOnClickListener {
             it?.isClickable = true
             it?.isFocusable = true
             Toast.makeText(requireContext(), "Función de borrado no implementada", Toast.LENGTH_SHORT).show()

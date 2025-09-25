@@ -48,7 +48,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ACETAMINOFEN 500mg"
-                        android:textSize="18sp"
+                        android:textSize="24dp"
                         android:textStyle="bold"
                         android:textColor="@color/on_tertiary_container"
                         android:layout_centerHorizontal="true"
@@ -59,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pastilla"
-                        android:textSize="16sp"
+                        android:textSize="24dp"
                         android:textColor="@color/on_tertiary_container"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/textMedicamento"
@@ -69,12 +69,12 @@
                         android:id="@+id/textDosis"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="7/14 Dosis"
-                        android:textSize="16sp"
-                        android:textColor="@color/on_tertiary_container"
-                        android:layout_centerHorizontal="true"
                         android:layout_below="@id/textTipo"
-                        android:layout_marginTop="12dp" />
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="1dp"
+                        android:text="7/14 Dosis"
+                        android:textColor="@color/on_tertiary_container"
+                        android:textSize="24dp" />
 
                 </RelativeLayout>
 
@@ -85,7 +85,7 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:text="CONFIRMAR"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:cornerRadius="120dp"
                 app:backgroundTint="@color/primary"
                 android:textColor="@color/on_primary"

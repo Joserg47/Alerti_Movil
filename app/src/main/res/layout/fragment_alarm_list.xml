@@ -8,18 +8,32 @@
     android:background="@color/background"
     android:paddingTop="24dp">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tus recordatorios"
-        android:textColor="@color/text_primary"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="start"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:paddingStart="16dp"
-        android:paddingTop="16dp"
+        android:paddingTop="24dp"
         android:paddingBottom="16dp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tus recordatorios"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_alarm_custom"
+            android:tint="@color/text_primary" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -61,37 +75,44 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Acetaminofen"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/on_primary_container" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="500mg"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/on_primary_container"
+                                    android:layout_marginStart="8dp" />
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Acetaminofen"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/on_primary_container" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="500mg"
-                                android:textSize="16sp"
-                                android:textColor="@color/on_primary_container"
-                                android:layout_marginStart="8dp" />
+                                android:text="Pastilla"
+                                android:textSize="14sp"
+                                android:background="@color/secondary_container"
+                                android:textColor="@color/on_secondary_container"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="4dp" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pastilla"
-                            android:textSize="14sp"
-                            android:background="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:paddingHorizontal="12dp"
-                            android:paddingVertical="4dp"
-                            android:layout_marginEnd="8dp" />
 
                     </LinearLayout>
 
@@ -103,30 +124,30 @@
                         android:layout_alignParentTop="true"
                         android:gravity="center_vertical">
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnEditar1"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_edit"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp"
-                            android:layout_marginEnd="8dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_edit"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Editar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/on_primary_container" />
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnBorrar1"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_delete"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_delete"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Borrar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:tint="@color/on_primary_container" />
 
                     </LinearLayout>
 
@@ -222,37 +243,44 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ibuprofeno"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/on_primary_container" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="400mg"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/on_primary_container"
+                                    android:layout_marginStart="8dp" />
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Ibuprofeno"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/on_primary_container" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="400mg"
-                                android:textSize="16sp"
-                                android:textColor="@color/on_primary_container"
-                                android:layout_marginStart="8dp" />
+                                android:text="Tableta"
+                                android:textSize="14sp"
+                                android:background="@color/secondary_container"
+                                android:textColor="@color/on_secondary_container"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="4dp" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tableta"
-                            android:textSize="14sp"
-                            android:background="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:paddingHorizontal="12dp"
-                            android:paddingVertical="4dp"
-                            android:layout_marginEnd="8dp" />
 
                     </LinearLayout>
 
@@ -264,30 +292,30 @@
                         android:layout_alignParentTop="true"
                         android:gravity="center_vertical">
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnEditar2"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_edit"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp"
-                            android:layout_marginEnd="8dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_edit"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Editar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/on_primary_container" />
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnBorrar2"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_delete"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_delete"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Borrar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:tint="@color/on_primary_container" />
 
                     </LinearLayout>
 
@@ -383,37 +411,44 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Omeprazol"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/on_primary_container" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="20mg"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/on_primary_container"
+                                    android:layout_marginStart="8dp" />
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Omeprazol"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/on_primary_container" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="20mg"
-                                android:textSize="16sp"
-                                android:textColor="@color/on_primary_container"
-                                android:layout_marginStart="8dp" />
+                                android:text="Cápsula"
+                                android:textSize="14sp"
+                                android:background="@color/secondary_container"
+                                android:textColor="@color/on_secondary_container"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="4dp" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cápsula"
-                            android:textSize="14sp"
-                            android:background="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:paddingHorizontal="12dp"
-                            android:paddingVertical="4dp"
-                            android:layout_marginEnd="8dp" />
 
                     </LinearLayout>
 
@@ -425,30 +460,30 @@
                         android:layout_alignParentTop="true"
                         android:gravity="center_vertical">
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnEditar3"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_edit"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp"
-                            android:layout_marginEnd="8dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_edit"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Editar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/on_primary_container" />
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnBorrar3"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_delete"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_delete"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Borrar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:tint="@color/on_primary_container" />
 
                     </LinearLayout>
 
@@ -544,37 +579,44 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Loratadina"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/on_primary_container" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10mg"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/on_primary_container"
+                                    android:layout_marginStart="8dp" />
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Loratadina"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/on_primary_container" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="10mg"
-                                android:textSize="16sp"
-                                android:textColor="@color/on_primary_container"
-                                android:layout_marginStart="8dp" />
+                                android:text="Tableta"
+                                android:textSize="14sp"
+                                android:background="@color/secondary_container"
+                                android:textColor="@color/on_secondary_container"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="4dp" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tableta"
-                            android:textSize="14sp"
-                            android:background="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:paddingHorizontal="12dp"
-                            android:paddingVertical="4dp"
-                            android:layout_marginEnd="8dp" />
 
                     </LinearLayout>
 
@@ -586,30 +628,30 @@
                         android:layout_alignParentTop="true"
                         android:gravity="center_vertical">
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnEditar4"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_edit"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp"
-                            android:layout_marginEnd="8dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_edit"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Editar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/on_primary_container" />
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnBorrar4"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_delete"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_delete"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Borrar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:tint="@color/on_primary_container" />
 
                     </LinearLayout>
 
@@ -705,37 +747,44 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Amoxicilina"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/on_primary_container" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="500mg"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/on_primary_container"
+                                    android:layout_marginStart="8dp" />
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Amoxicilina"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/on_primary_container" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="500mg"
-                                android:textSize="16sp"
-                                android:textColor="@color/on_primary_container"
-                                android:layout_marginStart="8dp" />
+                                android:text="Cápsula"
+                                android:textSize="14sp"
+                                android:background="@color/secondary_container"
+                                android:textColor="@color/on_secondary_container"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="4dp" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cápsula"
-                            android:textSize="14sp"
-                            android:background="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:paddingHorizontal="12dp"
-                            android:paddingVertical="4dp"
-                            android:layout_marginEnd="8dp" />
 
                     </LinearLayout>
 
@@ -747,30 +796,30 @@
                         android:layout_alignParentTop="true"
                         android:gravity="center_vertical">
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnEditar5"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_edit"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp"
-                            android:layout_marginEnd="8dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_edit"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Editar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="8dp"
+                            android:tint="@color/on_primary_container" />
 
-                        <com.google.android.material.button.MaterialButton
+                        <ImageButton
                             android:id="@+id/btnBorrar5"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/secondary_container"
-                            android:textColor="@color/on_secondary_container"
-                            android:padding="0dp"
-                            app:icon="@drawable/ic_delete"
-                            app:iconTint="@color/on_secondary_container"
-                            app:iconSize="20dp"
-                            app:cornerRadius="20dp" />
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_delete"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Borrar"
+                            android:padding="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:tint="@color/on_primary_container" />
 
                     </LinearLayout>
 
