@@ -3,7 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/alarmListFragment">
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment - Primera pantalla -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.alerti.LoginFragment"
+        android:label="Iniciar Sesión"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_alarms"
+            app:destination="@id/alarmListFragment" />
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- Register Fragment -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.alerti.RegisterFragment"
+        android:label="Registro"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/alarmListFragment"
